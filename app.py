@@ -6,24 +6,14 @@ Ariyawansha P.H.J.U.
 E/18/028
 '''
 
-# For Data Analysis
 import pandas as pd
-
-# For model creation and performance evaluation
+import numpy as np
 from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.metrics import classification_report, confusion_matrix
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-from sklearn.metrics import roc_curve, roc_auc_score
-
-# For visualizations and interactive dashboard creation
+from sklearn.model_selection import train_test_split
+import plotly.express as px
 import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output, State
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plotly.express as px
-import dash_bootstrap_components as dbc
 
 # Load dataset
 data = pd.read_csv('data/winequality-red.csv')
